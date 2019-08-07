@@ -1,0 +1,6 @@
+*.v
+*.vhdl
+*.log
+test_run_dir/
+.ipynb_checkpoints/
+rtl/

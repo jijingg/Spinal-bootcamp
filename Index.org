@@ -1,0 +1,56 @@
+* Spinal-bootcamp 
+** 1.1-Spinal-quick-start
+
+** 2.1-Spinal-core-Data-type
+** 2.2-Spinal-core-Combinational 
+** 2.3-Spinal-core-Sequential
+** 2.4-Spinal-core-FixPoint
+** 2.5-Spinal-core-Width-propogate
+** 2.6-Spinal-core-Component
+** 2.7-Spinal-core-Area
+** 2.8-Spinal-core-Clock-domain
+** 2.9-Spinal-core-Function
+
+** 3.1-Spinal-lib-flow-stream
+** 3.2-Spinal-lib-AMBA-bus
+** 3.3-Spinal-lib-Regif
+** 3.4-Spinal-lib-Soc
+** 3.5-Spinal-lib-VexRiscv
+
+** 4.1-Spinal-Example-Simple-ones
+*** APB3 definition
+*** Carry adder
+*** Color summing
+*** Counters
+*** PLL BlackBox and reset controller
+*** RGB to gray
+*** Sinus rom
+** 4.2-Spinal-Example-Intermediate-ones 
+** 4.3-Spinal-Example-Advanced-ones 
+
+** 5.1-Spinal-Error-checks
+*** Assignement overlap 
+*** Clock crossing violation
+*** Combinational loop 
+*** Hierarchy violation
+*** Io bundle
+*** Latch detected
+*** No driver on
+*** NullPointerException
+*** Register defined as component input
+*** Scope violation
+*** Spinal can’t clone class
+*** Unassigned register
+*** Assignement example
+*** Operator example
+** 5.1-Spinal-FAQ
+
+** 7.1-Scala-case-pattern
+** 7.2-Scala-implicit 
+** 7.3-Scala-reflect 
+** 7.4-Scala-Macro 
+** 7.5-Scala-utils 
+
+
+
+

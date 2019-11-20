@@ -45,6 +45,10 @@
 *** Operator example
 ** 5.1-Spinal-FAQ
 
+** 6.1-env-chisel
+** 6.2-env-breeze
+** 6.2-env-sourcecode
+
 ** 7.1-Scala-case-pattern
 ** 7.2-Scala-implicit 
 ** 7.3-Scala-reflect 

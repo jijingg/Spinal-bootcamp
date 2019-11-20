@@ -3,5 +3,11 @@
 *.log
 test_run_dir/
 .ipynb_checkpoints/
-rtl/
+rtl/*
 spinal_00_test.ipynb
+bak/
+zh2/
+zh-cn/
+en/
+spinal0.ipynb 
+a.sh

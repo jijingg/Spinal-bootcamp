@@ -1,14 +1,12 @@
 *.v
 *.vhdl
 *.log
-test_run_dir/
 .ipynb_checkpoints/
-rtl/*
-spinal_00_test.ipynb
+rtl/*.*
 bak/
 zh2/
 zh-cn/
 en/
-spinal0.ipynb 
+source/*.ipynb
 a.sh
 jupyter.md

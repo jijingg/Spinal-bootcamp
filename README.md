@@ -2,7 +2,7 @@
 
 This is SpinalHDL Tutorial, More important, it's a spinalHDL run-time environment.
 
-![Spinal-Jupyter](./source/jupyter.png)
+<div align="center"><img src="./source/jupyter.png" width = "40%" height = "40%"></div>
 
 Most of case come from [SpinalDoc](https://spinalhdl.github.io/SpinalDoc-RTD/index.html),
 In addition, we also introduced some advanced usage of Scala, which are very helpful to understand how spinalHDL works.

@@ -2,12 +2,14 @@
 
 This is SpinalHDL Tutorial, More important, it's a spinalHDL run-time environment.
 
+![Spinal-Jupyter](./source/jupyter.png)
+
 Most of case come from [SpinalDoc](https://spinalhdl.github.io/SpinalDoc-RTD/index.html),
 In addition, we also introduced some advanced usage of Scala, which are very helpful to understand how spinalHDL works.
 
-  Why we do such a thing:
-- Sometimes you just want to try a usage of a Spinal, but you don't want to create a new project
-- It's also very convenient to try a usage of Scala.
+  **Why we do such a thing:**
+- Sometimes you just want to try a usage of a Spinal or Scala, but you don't want to create a new project.
+- Practice is important for learning a new skill. So we did a lot of examples for you to try run.
 
 ## Setup Jupyter-notebook enviroment 
 
@@ -27,5 +29,5 @@ $: jupyter notebook &
 ## Before the start
 
   We assume you already have the basics knowledge of Scala，So there is no introduction to scala syntax here.  
-If you need to learn Scala, I would strongly recommend the book of "Programming in Scala"by Martin Odersky who is also the author of Scala. And just 
+If you need to learn Scala, I would strongly recommend the book of **["Programming in Scala"](https://www.oreilly.com/library/view/programming-in-scala/9780981531687/)** by Martin Odersky who is also the author of Scala. And just 
 try them as many as you can on jupyter notebook env, This may be more efficient to help you master Scala than just reading a book without practice.

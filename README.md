@@ -14,8 +14,8 @@ In addition, we also introduced some advanced usage of Scala, which are very hel
 ## Setup Jupyter-notebook enviroment 
 
 install follows first 
-- [jupyter-notebook](https://jupyter.org/install)
-- scala(at least 2.12)
+- [jupyter-notebook](https://jupyter.org/install)(Strongly recommend installing Python and Jupyter using the [Anaconda](https://www.anaconda.com/distribution/))
+- scala(Scala2.12 is recommended)
 - [almond](https://almond.sh/)(scala kernel for jupyter) 
 
 ## Usage

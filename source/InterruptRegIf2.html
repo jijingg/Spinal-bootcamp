@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      InterruptRegIf2
+    </title>
+    <style>
+      div{
+          text-align: center;
+      }
+
+      p.regif-title{
+          font-weight:800;
+          font-size:1.2em;
+      }
+      td{
+          white-space:pre-line; word-wrap: break-word; word-break: break-all;
+      }
+      td.fixWidth{
+          min-width:50px;
+          max-width:300px;
+      }
+      td.fixWidth2{
+          min-width:50px;
+          max-width:400px;
+      }
+      footer div p.info{
+          font-weight:300;
+          font-size:0.7em;
+      }
+      a {
+        color:black;text-decoration:none;
+      }
+      a:hover {
+          color:#09f;
+      }
+
+
+      .theme-default {
+          border: 3px solid #000;
+          border-collapse: collapse;
+      }
+      .theme-default td,
+      .theme-default th{
+          border: 1px solid #000;
+          border-top: 1px dashed #555;
+          border-bottom: 1px dashed #555;
+          padding: 3px;
+      }
+      .theme-default th{
+          background: #bbb;
+      }
+      .theme-default tbody td.reserved{
+          color: #bbb;
+          font-weight:200;
+          background : #eee;
+          /* text-decoration:line-through; */
+          text-decoration-color:#888;
+      }
+      .theme-default tbody tr.reg{
+          border-top: 2px solid #000;
+      }
+
+
+      .theme-spring{
+          border-collapse: collapse;
+          font-size: 1.em;
+          min-width: 800px;
+          border-radius: 5px 5px 0 0 ;
+          overflow: hidden;
+          box-shadow: 0 -10px 20px rgba(0,0,0,0.15);
+      }
+      .theme-spring th,
+      .theme-spring td {
+          padding:5px 10px;
+      }
+      .theme-spring thead tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align:center;
+          font-weight: bold;
+      }
+      .theme-spring tbody tr{
+          border-bottom: 1px solid #ddd;
+      }
+      .theme-spring tbody td{
+          border: 1px solid #ddd;
+      }
+      .theme-spring tbody tr:last-of-type{
+          border-bottom: 3px solid #009879;
+      }
+      .theme-spring tbody tr.active-row {
+          font-weight: blod;
+          color: #009879;
+      }
+      .theme-spring tbody td.reserved{
+          color: #aaa;
+          background : #fffff0;
+          /* font-style:italic; */
+          font-weight:200;
+          font-size:1.0em;
+      }
+      .theme-spring tbody tr.green{
+          background :#fffff0 ;
+      }
+
+    </style>
+  </head>
+  <body>
+  <header align="center">
+  <p class="regif-title"> InterruptRegIf2 Interface Document </p>
+  </header>
+  <div class="table">
+  <table  align="center" class="theme-default">
+      <br/>
+
+      <thead>
+        <tr align="center" >
+          <th>AddressOffset</th>
+          <th>RegName</th>
+          <th>Description</th>
+          <th>Width</th>
+          <th>Section</th>
+          <th>FieldName</th>
+          <th>R/W</th>
+          <th>Reset value</th>
+          <th>Field-Description</th>
+        </tr>
+      <thead>
+
+      <tbody>
+          <tr class="reg" align="left">
+            <td align="center" rowspan="7">0x0</td>
+            <td align="center" rowspan="7">M_INT_ENABLES</td>
+            <td class="fixWidth" align="center" rowspan="7">Interrupt Enable Reigsiter </td>
+            <td align="center" rowspan="7">32</td>
+            <td class="reserved" >[31:6]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="center">0x0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[5]</td>
+            <td class="" >srch_finish_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr align="left">
+            <td class="" >[4]</td>
+            <td class="" >scd_done_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr align="left">
+            <td class="" >[3]</td>
+            <td class="" >grp_done_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr align="left">
+            <td class="" >[2]</td>
+            <td class="" >ssc_done_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr align="left">
+            <td class="" >[1]</td>
+            <td class="" >pth_done_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr align="left">
+            <td class="" >[0]</td>
+            <td class="" >psc_done_en</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int enavle register</td>
+          </tr>          <tr class="reg" align="left">
+            <td align="center" rowspan="7">0x4</td>
+            <td align="center" rowspan="7">M_INT_MASK</td>
+            <td class="fixWidth" align="center" rowspan="7">Interrupt Mask   Reigsiter </td>
+            <td align="center" rowspan="7">32</td>
+            <td class="reserved" >[31:6]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="center">0x0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[5]</td>
+            <td class="" >srch_finish_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr align="left">
+            <td class="" >[4]</td>
+            <td class="" >scd_done_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr align="left">
+            <td class="" >[3]</td>
+            <td class="" >grp_done_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr align="left">
+            <td class="" >[2]</td>
+            <td class="" >ssc_done_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr align="left">
+            <td class="" >[1]</td>
+            <td class="" >pth_done_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr align="left">
+            <td class="" >[0]</td>
+            <td class="" >psc_done_mask</td>
+            <td class="" align="center">RW</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int mask register</td>
+          </tr>          <tr class="reg" align="left">
+            <td align="center" rowspan="7">0x8</td>
+            <td align="center" rowspan="7">M_INT_STATUS</td>
+            <td class="fixWidth" align="center" rowspan="7">Interrupt status Reigsiter </td>
+            <td align="center" rowspan="7">32</td>
+            <td class="reserved" >[31:6]</td>
+            <td class="reserved" >--</td>
+            <td class="reserved" align="center">NA</td>
+            <td class="reserved" align="center">0x0</td>
+            <td class="reserved fixWidth2" >Reserved</td>
+          </tr>          <tr align="left">
+            <td class="" >[5]</td>
+            <td class="" >srch_finish_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>          <tr align="left">
+            <td class="" >[4]</td>
+            <td class="" >scd_done_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>          <tr align="left">
+            <td class="" >[3]</td>
+            <td class="" >grp_done_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>          <tr align="left">
+            <td class="" >[2]</td>
+            <td class="" >ssc_done_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>          <tr align="left">
+            <td class="" >[1]</td>
+            <td class="" >pth_done_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>          <tr align="left">
+            <td class="" >[0]</td>
+            <td class="" >psc_done_stat</td>
+            <td class="" align="center">RC</td>
+            <td class="" align="center">0x0</td>
+            <td class=" fixWidth2" >int status register</td>
+          </tr>
+      </tbody>
+  </table>
+  </div>
+  <footer align="center">
+  <div> <p class="info">Powered By <a href="https://spinalhdl.github.io/SpinalDoc-RTD/"> SpinalHDL </a> </p> </div>
+  </footer>
+  </body>
+</html>

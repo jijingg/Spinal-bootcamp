@@ -1,7 +1,7 @@
 // import $ivy.`com.github.spinalhdl::spinalhdl-core:1.3.7-SNAPSHOT` 
 // import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.3.7-SNAPSHOT` 
-import $ivy.`com.github.spinalhdl::spinalhdl-core:1.3.6` 
-import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.3.6` 
+import $ivy.`com.github.spinalhdl::spinalhdl-core:1.3.8` 
+import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.3.8` 
 // import $ivy.`org.scalanlp::breeze:0.13.2` 
 
 import spinal.core._

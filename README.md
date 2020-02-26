@@ -31,3 +31,11 @@ $: jupyter notebook &
   We assume you already have the basics knowledge of Scala，So there is no introduction to scala syntax here.  
 If you need to learn Scala, I would strongly recommend the book of **["Programming in Scala"](https://www.oreilly.com/library/view/programming-in-scala/9780981531687/)** by Martin Odersky who is also the author of Scala. And just 
 try them as many as you can on jupyter notebook env, This may be more efficient to help you master Scala than just reading a book without practice.
+
+## FAQ
+
+1. scala version, almond version
+SpinalHDL have not release on Scala2.1.3 yet, so you need specify the almond version to 0.5.0 before isntall. 
+```shell
+$ SCALA_VERSION=2.12.8 ALMOND_VERSION=0.5.0   //0.5.0 on scala 2.12.8
+```

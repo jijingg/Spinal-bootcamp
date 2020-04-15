@@ -1,5 +1,6 @@
-import $ivy.`com.github.spinalhdl::spinalhdl-core:1.3.8` 
-import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.3.8` 
+import $ivy.`com.github.spinalhdl::spinalhdl-core:1.4.0` 
+import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.4.0` 
+import $plugin.$ivy.`com.github.spinalhdl::spinalhdl-idsl-plugin:1.4.0` 
 // import $ivy.`org.scalanlp::breeze:0.13.2` 
 
 import spinal.core._

@@ -1,6 +1,13 @@
-import $ivy.`com.github.spinalhdl::spinalhdl-core:1.4.0` 
-import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.4.0` 
-import $plugin.$ivy.`com.github.spinalhdl::spinalhdl-idsl-plugin:1.4.0` 
+import $ivy.`com.github.spinalhdl::spinalhdl-core:1.4.1` 
+import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.4.1` 
+import $plugin.$ivy.`com.github.spinalhdl::spinalhdl-idsl-plugin:1.4.1` 
+
+// import ammonite.ops.Path  //http://ammonite.io/
+// interp.load.cp(Path("/Users/mache/.ivy2/local/com.github.spinalhdl/spinalhdl-core_2.11/1.4.1/jars/spinalhdl-core_2.11.jar"))
+// interp.load.cp(Path("/Users/mache/.ivy2/local/com.github.spinalhdl/spinalhdl-lib_2.11/1.4.1/jars/spinalhdl-lib_2.11.jar"))
+// interp.load.cp(Path("/Users/mache/.ivy2/local/com.github.spinalhdl/spinalhdl-idsl-payload_2.11/1.4.1/jars/spinalhdl-idsl-payload_2.11.jar"))
+// interp.load.cp(Path("/Users/mache/.ivy2/local/com.github.spinalhdl/spinalhdl-idsl-plugin_2.11/1.4.1/jars/spinalhdl-idsl-plugin_2.11.jar"))   
+
 // import $ivy.`org.scalanlp::breeze:0.13.2` 
 
 import spinal.core._

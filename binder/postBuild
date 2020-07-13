@@ -20,4 +20,4 @@ jupyter labextension install @jupyterlab/plotly-extension
 
 # Install custom Javascript for solutions
 mkdir -p ~/.jupyter/custom
-cp source/load-spinal.js ~/.jupyter/custom/custom.js
+cp source/custom.js ~/.jupyter/custom/custom.js

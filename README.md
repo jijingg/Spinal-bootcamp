@@ -34,8 +34,9 @@ try them as many as you can on jupyter notebook env, This may be more efficient 
 
 ## FAQ
 
-1. scala version, almond version
-SpinalHDL have not release on Scala2.1.3 yet, so you need specify the almond version to 0.5.0 before isntall. 
-```shell
-$ SCALA_VERSION=2.12.8 ALMOND_VERSION=0.5.0   //0.5.0 on scala 2.12.8
-```
+1. Make sure the right version have been installed.
+
+- Java Version jdk1.8 (java11 not supported yet)
+- Scala Version 2.12.x (2.13.x not supported yet)
+- Almond Version  0.5.0 is recommended
+

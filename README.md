@@ -40,3 +40,9 @@ try them as many as you can on jupyter notebook env, This may be more efficient 
 - Scala Version 2.12.x (2.13.x not supported yet)
 - Almond Version  0.5.0 is recommended
 
+install Almond on MacOs
+```shell
+brew install coursier/formulas/coursier
+cs launch --fork almond:0.5.0 --scala 2.11.12 -- --install --force
+```
+```

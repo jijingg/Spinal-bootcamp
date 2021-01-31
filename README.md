@@ -45,4 +45,3 @@ install Almond on MacOs
 brew install coursier/formulas/coursier
 cs launch --fork almond:0.5.0 --scala 2.11.12 -- --install --force
 ```
-```

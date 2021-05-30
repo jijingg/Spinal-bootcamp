@@ -68,6 +68,14 @@ class HandShakePipeTest extends AnyFunSuite {
     io.sout << io.sin.s2mPipe()
   }
 
+  class BothPipeStream(width: Int) extends PipeStream(width) {
+    io.sout << io.sin.m2sPipe().s2mPipe()
+  }
+
+  class BothPipeStream2(width: Int) extends PipeStream(width) {
+    io.sout << io.sin.s2mPipe().m2sPipe()
+  }
+
   abstract class PipeTB(width: Int) extends Component {
     val pipe: HandShakePipe
     val stream: PipeStream
@@ -91,6 +99,22 @@ class HandShakePipeTest extends AnyFunSuite {
     pipe.readyReg.simPublic()
     pipe.validReg.simPublic()
     pipe.doutReg.simPublic()
+  }
+
+  class BothPipeTB(width: Int) extends PipeTB(width) {
+    override val pipe = new BothHandShakePipe(width)
+    override val stream = new BothPipeStream(width)
+
+    pipe.io.simPublic()
+    stream.io.simPublic()
+  }
+
+  class BothPipe2TB(width: Int) extends PipeTB(width) {
+    override val pipe = new BothHandShakePipe2(width)
+    override val stream = new BothPipeStream2(width)
+
+    pipe.io.simPublic()
+    stream.io.simPublic()
   }
 
   def simTest(dut: PipeTB) {
@@ -184,6 +208,21 @@ class HandShakePipeTest extends AnyFunSuite {
     SimConfig
     .withWave
     .compile(new S2MPipeTB(width))
-    .doSim(simTest(_))//(seed = 896944298)
+    .doSim(simTest(_))
+  }
+
+  test("valid pipeline + ready pipeline") {
+    SimConfig
+    .withWave
+    .compile(new BothPipeTB(width))
+    .doSim(simTest(_))
+  }
+
+  test("ready pipeline + valid pipeline") {
+    SimConfig
+    .withWave
+    .compile(new BothPipe2TB(width))
+    .doSim(simTest(_))
   }
 }
+

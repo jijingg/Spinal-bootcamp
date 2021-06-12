@@ -11,3 +11,5 @@ source/*.ipynb
 a.sh
 jupyter.md
 0.0-teston*
+exercises/out
+out

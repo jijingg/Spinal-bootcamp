@@ -11,7 +11,7 @@ class ApbArbiter(
   require(numInputSlaves > 0)
 
   val io = new Bundle {
-    val en = in Bool
+    val en = in Bool ()
     val masterOut = master(Apb3(apbConfig))
     val slavesIn = Vec(slave(Apb3(apbConfig)), numInputSlaves)
   }

@@ -16,11 +16,11 @@ class FifoCC[T <: Data](
 
   val io = new Bundle {
     val wData = in(dataType())
-    val wEn = in Bool
-    val wFull = out Bool
+    val wEn = in Bool ()
+    val wFull = out Bool ()
     val rData = out(dataType())
-    val rEn = in Bool
-    val rEmpty = out Bool
+    val rEn = in Bool ()
+    val rEmpty = out Bool ()
   }
 
   val ADDR_WIDTH = log2Up(depth + 1)

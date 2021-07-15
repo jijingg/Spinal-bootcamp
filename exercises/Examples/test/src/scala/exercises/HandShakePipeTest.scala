@@ -117,7 +117,15 @@ class HandShakePipeTest extends AnyFunSuite {
     stream.io.simPublic()
   }
 
-  def simTest(dut: PipeTB) {
+  class BothPipe3TB(width: Int) extends PipeTB(width) {
+    override val pipe = new BothHandShakePipe3(width)
+    override val stream = new BothPipeStream2(width)
+
+    pipe.io.simPublic()
+    stream.io.simPublic()
+  }
+
+  def simTest(dut: PipeTB): Unit = {
     SimTimeout(1000)
     dut.clockDomain.forkStimulus(2)
 
@@ -145,7 +153,10 @@ class HandShakePipeTest extends AnyFunSuite {
         dut.stream.io.sin.valid #= true
         dut.stream.io.sin.payload #= din
         dut.clockDomain.waitSampling()
-        assert(dut.pipe.io.input.ready.toBoolean == dut.stream.io.sin.ready.toBoolean)
+        assert(
+          dut.pipe.io.input.ready.toBoolean == dut.stream.io.sin.ready.toBoolean,
+          s"pipe ri=${dut.pipe.io.input.ready.toBoolean} not match stream ri=${dut.stream.io.sin.ready.toBoolean}"
+        )
         if (dut.pipe.io.input.valid.toBoolean && dut.pipe.io.input.ready.toBoolean) {
           din += 1
         }
@@ -159,11 +170,14 @@ class HandShakePipeTest extends AnyFunSuite {
         dut.pipe.io.output.ready #= randBool
         dut.stream.io.sout.ready #= randBool
         dut.clockDomain.waitSampling()
-        assert(dut.pipe.io.output.valid.toBoolean == dut.stream.io.sout.valid.toBoolean)
+        assert(
+          dut.pipe.io.output.valid.toBoolean == dut.stream.io.sout.valid.toBoolean,
+          s"pipe vo=${dut.pipe.io.output.valid.toBoolean} not match stream vo=${dut.stream.io.sout.valid.toBoolean}"
+        )
         if (dut.pipe.io.output.valid.toBoolean && dut.pipe.io.output.ready.toBoolean) {
           assert(
             dut.pipe.io.output.payload.toInt == dut.stream.io.sout.payload.toInt,
-            s"dout=${dut.pipe.io.output.payload.toInt} != ${dut.stream.io.sout.payload.toInt}"
+            s"pipe dout=${dut.pipe.io.output.payload.toInt} not match stream dout=${dut.stream.io.sout.payload.toInt}"
           )
           matchCnt += 1
           if (matchCnt > 100) {
@@ -222,6 +236,13 @@ class HandShakePipeTest extends AnyFunSuite {
     SimConfig
     .withWave
     .compile(new BothPipe2TB(width))
+    .doSim(simTest(_))
+  }
+
+  test("pipeline fsm") {
+    SimConfig
+    .withWave
+    .compile(new BothPipe3TB(width))
     .doSim(simTest(_))
   }
 }

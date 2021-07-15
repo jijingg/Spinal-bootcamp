@@ -11,19 +11,22 @@ class Booth(width: Int) extends Component {
   require(width > 1)
 
   val io = new Bundle {
-    val load = in Bool
+    val load = in Bool ()
     val multiplicand = in SInt (width bits)
     val multipler = in SInt (width bits)
-    val ready = out Bool
+    val ready = out Bool ()
     val product = out SInt (2 * width bits)
   }
 
-  val buf = Reg(SInt(2 * width + 1 bits)) init (0) simPublic ()
-  val upperPart = buf(2 * width downto width + 1) simPublic ()
-  val lowerPart = buf(width downto 0) simPublic ()
-
+  val buf = Reg(SInt(2 * width + 1 bits)) init (0)
+  val upperPart = buf(2 * width downto width + 1)
+  val lowerPart = buf(width downto 0)
   val cnt = CounterFreeRun(stateCount = width + 2)
-  cnt.value simPublic ()
+
+  buf.simPublic()
+  upperPart.simPublic()
+  lowerPart.simPublic()
+  cnt.value.simPublic()
 
   when(io.load) {
     buf := S(0, width bits) @@ io.multipler @@ S(0, 1 bit)

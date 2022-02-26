@@ -1,0 +1,24 @@
+name: CI
+on:
+  pull_request:
+    branches: [dev]
+  schedule: [cron: "3 */24 * * *"]
+
+jobs:
+  build-and-simulate:
+    name: Build and Simulate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: olafurpg/setup-scala@v10
+        with:
+          java-version: adopt@1.11
+      - name: Run
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y verilator
+          ./exercises/run.sh
+      - name: Setup tmate session
+        if: ${{ failure() }}
+        uses: mxschmitt/action-tmate@v3
+

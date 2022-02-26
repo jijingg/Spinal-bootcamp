@@ -1,0 +1,4 @@
+{
+  "image": "datenlord/spinal-cocotb:1.6.0",
+  "extensions": ["scalameta.metals"]
+}

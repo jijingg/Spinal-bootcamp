@@ -21,21 +21,27 @@ implicit class SpinalReportExtend(sp :SpinalReport[Component]) {
   }
 }
 
-def showRtl(dut: => Component, mode:SpinalMode = `Verilog`) = {
-  println(SpinalConfig(
-    mode,
+val spcfg =  SpinalConfig(
+    defaultConfigForClockDomains = ClockDomainConfig(clockEdge = RISING,
+      resetKind = ASYNC,
+      resetActiveLevel = LOW
+    ),
+    headerWithDate = true,
+    removePruned = true,
+    anonymSignalPrefix = "t",
+    mergeAsyncProcess  = true ,
     targetDirectory="rtl/"
-  ).generate(dut).getRtlString_local) 
+  )
+
+def showRtl(dut: => Component, mode:SpinalMode = `Verilog`) = {
+  println(spcfg.copy(mode = mode).generate(dut).getRtlString_local) 
 }
 
 def showVhdl(dut: => Component) = showRtl(dut,VHDL)   
 
 @deprecated("Deprecated, showRtl is recommended", "spinal-bootcamp 0.1.0")
 def showVerilog(dut: => Component, moduleName:String) = {
-  SpinalConfig(
-    mode = Verilog,
-    targetDirectory="rtl/"
-  ).generate(dut)
+  spcfg.copy(mode = Verilog).generate(dut)
   println(scala.io.Source.fromFile("rtl/"+moduleName+".v").mkString)
 }
 

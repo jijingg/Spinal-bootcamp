@@ -17,8 +17,7 @@ There are two ways, you can run online or locally
 
 ### Online 
 
-click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder) and start,
-or vist https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder directly
+click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder) and start 
 
 ### Local
 

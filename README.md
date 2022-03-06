@@ -11,20 +11,30 @@ In addition, we also introduced some advanced usage of Scala, which are very hel
 - Sometimes you just want to try a usage of a Spinal or Scala, but you don't want to create a new project.
 - Practice is important for learning a new skill. So we did a lot of examples for you to try run.
 
-## Setup Jupyter-notebook enviroment 
-
-install follows first 
-- [jupyter-notebook](https://jupyter.org/install)(Strongly recommend installing Python and Jupyter using the [Anaconda](https://www.anaconda.com/distribution/))
-- scala(Scala2.12 is recommended)
-- [almond](https://almond.sh/)(scala kernel for jupyter) 
-
 ## Usage
+
+There are two ways, you can run online or locally
+
+### Online 
+
+click [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder) and start,
+or vist https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder directly
+
+### Local
 
 ```shell
 $: git clone https://github.com/jijingg/Spinal-bootcamp
 $: cd Spinal-bootcamp
 $: jupyter notebook &
 ```
+ 
+## Setup Jupyter-notebook enviroment 
+
+if you want run locally, install follows first 
+- [jupyter-notebook](https://jupyter.org/install)(Strongly recommend installing Python and Jupyter using the [Anaconda](https://www.anaconda.com/distribution/))
+- scala(Scala2.12 is recommended)
+- [almond](https://almond.sh/)(scala kernel for jupyter) 
+
 
 ## Before the start
 

@@ -27,7 +27,7 @@ val spcfg =  SpinalConfig(
       resetActiveLevel = LOW
     ),
     headerWithDate = true,
-    removePruned = true,
+    removePruned = false,
     anonymSignalPrefix = "t",
     mergeAsyncProcess  = true ,
     targetDirectory="rtl/"

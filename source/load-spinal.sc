@@ -1,6 +1,6 @@
-import $ivy.`com.github.spinalhdl::spinalhdl-core:1.6.4` 
-import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.6.4` 
-import $plugin.$ivy.`com.github.spinalhdl::spinalhdl-idsl-plugin:1.6.4` 
+import $ivy.`com.github.spinalhdl::spinalhdl-core:1.7.0` 
+import $ivy.`com.github.spinalhdl::spinalhdl-lib:1.7.0` 
+import $plugin.$ivy.`com.github.spinalhdl::spinalhdl-idsl-plugin:1.7.0` 
 
 // import ammonite.ops.Path  //http://ammonite.io/
 // interp.load.cp(Path("/Users/mache/.ivy2/local/com.github.spinalhdl/spinalhdl-core_2.11/1.4.1/jars/spinalhdl-core_2.11.jar"))

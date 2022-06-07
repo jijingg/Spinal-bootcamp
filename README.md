@@ -38,7 +38,7 @@ if you want run locally, install follows first
 
 [WSL](https://docs.microsoft.com/en-us/windows/wsl/) and [VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) is recommended.
 
-1. Clone this repository and open a WSL terminal here.
+1. Clone this repository and open a **WSL terminal** here.
 2. Confirm your java and jupyter installation like this
 ```
 ~# java -version

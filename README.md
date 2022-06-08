@@ -1,4 +1,4 @@
-## Spinal-bootcamp [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder)
+# Spinal-bootcamp [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jijingg/Spinal-bootcamp/binder)
 
 This is SpinalHDL Tutorial, More important, it's a spinalHDL run-time environment.
 
@@ -34,6 +34,36 @@ if you want run locally, install follows first
 - scala(Scala2.12 is recommended)
 - [almond](https://almond.sh/)(scala kernel for jupyter) 
 
+### Setup on Windows10 and higher
+
+[WSL](https://docs.microsoft.com/en-us/windows/wsl/) and [VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) is recommended.
+
+1. Clone this repository and open a **WSL terminal** here.
+2. Confirm your java and jupyter installation like this
+```
+~# java -version
+openjdk version "1.8.0_312"
+OpenJDK Runtime Environment (build 1.8.0_312-8u312-b07-0ubuntu1~20.04-b07)
+OpenJDK 64-Bit Server VM (build 25.312-b07, mixed mode)
+~# echo $JAVA_HOME
+/usr/lib/jvm/java-8-openjdk-amd64
+~# pip list
+```
+3. Install [almond](https://almond.sh/) for WSL (the same as Linux)
+```
+~# cd source
+~# chmod +x coursier
+~# ./coursier launch --fork almond -- --install
+```
+4. Open the folder with [VS Code](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) or jupyter
+
+`~# cd ..`
+
+| VS Code  | jupyter lab   | jupyter notebook |
+| :------: | :-----------: | :--------------: |
+| `code .` | `jupyter-lab` | `jupyter notebook --allow-root &` |
+
+- If you don't use VS Code, you would change the default browser of jupyter in WSL.
 
 ## Before the start
 
